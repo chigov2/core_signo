@@ -1,0 +1,39 @@
+psql.exe -U postgres -d signo -f f:\dump\dump.sql
+
+psql.exe -U postgres -d postgres -f f:\dump\dump.sql
+
+yadro#14#
+
+postgres
+
+
+ALTER USER postgres WITH PASSWORD 'yadro#14#'
+
+create table employees (id serial primary key, name character varying(30),surname character varying(30),department character varying(30), salary integer);
+
+insert into employees (name, surname,department,salary) values ('Tom','Anders','IT', 33);
+
+select * from users;
+
+insert into employees values
+(1,'Mike','Stoba','IT',500)
+
+services. msc
+
+G:\Postgres\bin>pg_ctl stop -D G:\Postgres\data
+
+===================================================
+Another way:
+
+    Open Run Window by Winkey + R
+    Type services.msc
+    Search Postgres service based on version installed.
+    Click stop, start or restart the service option.
+
+
+///////////////////////////////////////////
+
+halcon2
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core (http://java.sun.com/jsp/jstl/core)" prefix="c" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
