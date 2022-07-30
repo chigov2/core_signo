@@ -1,0 +1,90 @@
+15  sudo apt-get install build-essential
+   32  rm DEFINICION\ DE\ REQUERIMIENTOS.xls 
+   34  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls 
+   36  soffice --headless --convert-to npg ESPECIFICACION-DE-REQUERIMIENTOS.xls 
+   38  soffice --headless --convert-to npg ESPECIFICACION-DE-REQUERIMIENTOS.xls 
+   40  soffice --headless --convert-to npg:ESPECIFICACION-DE-REQUERIMIENTOS.xls 
+   42  convert
+   43  sudo apt install imagemagick
+   44  convert
+   48  rm *.pdf
+   49  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls && convert -density 288x288 -units pixelsperinch ESPECIFICACION-DE-REQUERIMIENTOS.pdf -background white -alpha background -alpha off -quality 100 esp-de-req.png
+   51  vim /etc/ImageMagick-6/policy.xml 
+   52  sudo apt install vim
+   53  vim /etc/ImageMagick-6/policy.xml 
+   54  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls && convert -density 288x288 -units pixelsperinch ESPECIFICACION-DE-REQUERIMIENTOS.pdf -background white -alpha background -alpha off -quality 100 esp-de-req.png
+   55  gs --version
+   56  cd /etc/ImageMagick-6/
+   57  ll
+   58  cp policy.xml policy.xml.sec
+   59  sudo cp policy.xml policy.xml.sec
+   60  ll
+   61  sudo vim policy.xml
+   62  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls && convert -density 288x288 -units pixelsperinch ESPECIFICACION-DE-REQUERIMIENTOS.pdf -background white -alpha background -alpha off -quality 100 esp-de-req.png
+   67  cd DocExport/
+   68  ll
+   69  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls && convert -density 288x288 -units pixelsperinch ESPECIFICACION-DE-REQUERIMIENTOS.pdf -background white -alpha background -alpha off -quality 100 esp-de-req.png
+   70  ll
+   71  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls && convert -density 288x288 -units pixelsperinch ESPECIFICACION-DE-REQUERIMIENTOS.pdf -background white -alpha background -alpha off -quality 100 esp-de-req.png
+   72  ll
+   73  rm *.png
+   74  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls && convert -density 288x288 -units pixelsperinch ESPECIFICACION-DE-REQUERIMIENTOS.pdf -background white -alpha background -alpha off -quality 100 esp-de-req.png
+   75  soffice --headless --convert-to pdf ESPECIFICACION-DE-REQUERIMIENTOS.xls && convert -quiet -density 288x288 -units pixelsperinch ESPECIFICACION-DE-REQUERIMIENTOS.pdf -background white -alpha background -alpha off -quality 100 esp-de-req.png
+   76  ll
+   77  convert esp-de-req-0.png esp-de-req-1.png -quality 100 -units PixelsPerInch -density 288x288 output.pdf
+   78  ll
+   79  history
+   80  cls
+   81  history
+   82  exit
+   83  whois
+   84  sudo pat install whois
+   85  sudo apt install whois
+   86  whois docufirma.com
+   87  soffice
+   88  soffice --help
+   89  pwd
+   90  ll
+   91  pwd
+   92  ll
+   93  mkdir DocExport
+   94  cp Documents/dkf/* DocExport/
+   95  cd DocExport/
+   96  ll
+   97  soffice --help
+   98  soffice -help headless
+   99  soffice --help headless
+  100  exit
+  101  pwd
+  102  ll
+  103  cd DocExport/
+  104  ll
+  105  whois docufirma.com
+  106  ll
+  107  ls -la -h
+  108  pwd
+  109  ll
+  110  pwd
+  111  ll
+  112  pwd
+  113  cd -
+  114  cd /
+  115  ls -la
+  116  pwd
+  117  cd home
+  118  cls
+  119  pwd
+  120  ipconfig
+  121  ifconfig
+  122  services
+  123  service
+  124  service --status-all | grep ssh
+  125  service --status-all
+  126  service --status-all | grep open
+  127  sudo apt-get install openssh-server
+  128  pwd
+  129  exit
+  130  pwd
+  131  ll
+  132  pwd
+  133  ll

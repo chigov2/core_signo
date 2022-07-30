@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-4.3.xsd ">
+
+
+    <!-- Step 1: DataSource and connection pool configuration-->
+    <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+          destroy-method="close">
+        <property name="driverClass" value="org.postgresql.Driver"/>
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/signo?useSSL=false"/>
+        <property name="user" value="postgres"/>
+        <property name="password" value="yadro#14#"/>
+
+        <!-- Connection pool properties for ComboPooledDataSource -->
+        <property name="minPoolSize" value="3"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="maxIdleTime" value="10000"/>
+    </bean>
+
+    <!-- Step 2: Hibernate session factory configuration -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="myDataSource"/>
+        <property name="packagesToScan" value="co.firmareal.entity"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQL82Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Step 3: Hibernate transaction manager -->
+    <bean id="appTransactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- Step 4: Enable transactional behavior based on annotations -->
+    <tx:annotation-driven transaction-manager="appTransactionManager"/>
+</beans>
